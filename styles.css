@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #002296;
+  background: linear-gradient(152deg, rgba(0, 34, 150, 0.6) 0%, rgba(130, 0, 143, 0.6) 33%, rgba(255, 83, 65, 0.6) 100%);
+  /* background-color: red; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body .fake-link {
+  color: purple;
+  text-decoration: underline;
+}
+
+body .fake-link:hover {
+  cursor: pointer;
+}
+
+body .Dim {
+  filter: brightness(70%);
+}
+
+body .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  min-width: 350px;
+  margin: 0 0.25rem;
+}
+
+body .wrapper .mainSignIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0.1rem solid grey;
+  border-radius: 0.4rem;
+  background-color: rgba(238, 238, 238, 0.4);
+  width: 100%;
+  padding: 1.5rem;
+}
+
+body .wrapper .mainSignIn img {
+  width: 3rem;
+  margin-bottom: 1rem;
+}
+
+body .wrapper .mainSignIn form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 2rem;
+}
+
+body .wrapper .mainSignIn form .inputs {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+body .wrapper .mainSignIn form .inputs input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+body .wrapper .mainSignIn form #login-btn {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #4e95f2;
+  border: none;
+  border-radius: 0.25rem;
+  color: #dbdbdb;
+}
+
+body .wrapper .mainSignIn .seperator {
+  margin: 1rem 0;
+}
+
+body .wrapper .mainSignIn .other-actions span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0.25rem 0;
+}
+
+body .wrapper .mainSignIn .other-actions span:first-of-type {
+  font-size: 1.15em;
+}
+
+body .wrapper .mainSignIn .other-actions span:last-of-type {
+  font-size: 0.9em;
+}
+
+body .wrapper .no-accn {
+  border: 0.1rem solid grey;
+  border-radius: 0.4rem;
+  background-color: rgba(238, 238, 238, 0.4);
+  width: 100%;
+  margin: 1.25rem 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+body .wrapper .other-ways {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 0.1rem solid grey;
+  border-radius: 0.4rem;
+  background-color: rgba(238, 238, 238, 0.4);
+  width: 100%;
+  padding: 0.5rem;
+}
+
+body .wrapper .other-ways .title {
+  margin-bottom: 0.5rem;
+}
+
+body .wrapper .other-ways .apple-and-pstore {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body .wrapper .other-ways .apple-and-pstore img {
+  width: 40%;
+  cursor: pointer;
+}

@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: rgb(0, 34, 150);
+  $opacity: 0.6;
+  background: linear-gradient(
+    152deg,
+    rgba(0, 34, 150, $opacity) 0%,
+    rgba(130, 0, 143, $opacity) 33%,
+    rgba(255, 83, 65, $opacity) 100%
+  );
+  /* background-color: red; */
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @mixin box-stuff {
+    border: 0.1rem solid grey;
+    border-radius: 0.4rem;
+    background-color: rgba(238, 238, 238, 0.4);
+    width: 100%;
+  }
+
+  @mixin flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @mixin flex-column {
+    @include flex-row;
+    flex-direction: column;
+  }
+
+  .fake-link {
+    color: purple;
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .Dim {
+    filter: brightness(70%);
+  }
+
+  .wrapper {
+    @include flex-column;
+    max-width: 500px;
+    min-width: 350px;
+    margin: 0 0.25rem;
+
+    .mainSignIn {
+      @include flex-column;
+      @include box-stuff;
+
+      padding: 1.5rem;
+
+      img {
+        width: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      form {
+        @include flex-column;
+        width: 100%;
+        font-size: 2rem;
+
+        .inputs {
+          width: 100%;
+          margin-bottom: 0.5rem;
+
+          input {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            margin: 0.5rem 0;
+            display: block;
+            //   border-radius: 0.1rem;
+            font-family: 'Roboto', sans-serif;
+            //   font-size: 1.5;
+          }
+        }
+
+        #login-btn {
+          padding: 0.5rem;
+          font-size: 1.5rem;
+          width: 100%;
+          background-color: #4e95f2;
+          border: none;
+          border-radius: 0.25rem;
+          color: #dbdbdb;
+        }
+      }
+
+      .seperator {
+        margin: 1rem 0;
+      }
+
+      .other-actions span {
+        @include flex-column;
+
+        &:first-of-type {
+          font-size: 1.15em;
+        }
+        &:last-of-type {
+          font-size: 0.9em;
+        }
+
+        margin: 0.25rem 0;
+      }
+    }
+
+    .no-accn {
+      @include box-stuff;
+      margin: 1.25rem 0;
+
+      padding: 0.5rem;
+
+      text-align: center;
+    }
+
+    .other-ways {
+      @include flex-column;
+      @include box-stuff;
+      padding: 0.5rem;
+
+      .title {
+        margin-bottom: 0.5rem;
+      }
+
+      .apple-and-pstore {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+          width: 40%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
